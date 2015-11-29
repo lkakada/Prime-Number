@@ -1,1 +1,1 @@
-'Primary number'
+'Primary number http://lkakada.github.io/Prime-Number/'
