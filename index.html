@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Prime Number</title>
@@ -7,40 +7,19 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script language="javascript" type="text/javascript" src="IndexJS.js"></script>
+	<link rel="stylesheet" href="myStyle.css">
 </head>
 <body>
-	<div class="form-group">
-		<input style="margin-top:20px; margin-left: 20px" type="text" id="input" placeholder="Enter number" />	
-		<span id="display"></span>
+	<div class="container">
+		<div class="form-group">
+			<input class="form-control" type="text" id="input" placeholder="Enter number" />	
+			<span id="display"></span>
+		</div>
+		<div class="form-group">
+			<button style="margin-left: 20px" class="btn btn-primary" onclick="findPrimeNum(input)">Verify</button>
+			<button class="btn btn-primary" onclick="reset()">Clear</button>
+		</div>
 	</div>
-	<div class="form-group">
-		<button style="margin-left: 20px" class="btn btn-primary" onclick="findPrimeNum(input)">Verify</button>
-	</div>
-
-	<script language="javascript" type="text/javascript">
-		function findPrimeNum(n){
-			var n = document.getElementById('input').value;
-			var x = 1;
-			if(n == '' || isNaN(n)){
-				 alert('Please enter number')
-				 return false;
-			}
-			if(n==0 || n==1) x=0;
-				for(i=2; i<n; i++){
-					if(n%i==0)
-					{
-						x = 0
-						break;
-					}
-				}
-				if(x==1){
-					var d = n + " "+" is prime" ;
-				}
-				else{
-					var d = n + " "+" is not prime";
-				}
-				document.getElementById('display').innerHTML = d;
-		}
-	</script>
 </body>
 </html>
